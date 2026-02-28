@@ -6,7 +6,7 @@
 /*   By: yfirat <yfirat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 14:11:20 by yfirat            #+#    #+#             */
-/*   Updated: 2026/02/26 13:51:59 by yfirat           ###   ########.fr       */
+/*   Updated: 2026/02/28 16:05:52 by yfirat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,6 @@
 # define GET_NEXT_LINE_H
 
 # define BUFFER_SIZE 42
-
-# include <unistd.h>
-# include <stdlib.h>
-# include <stddef.h>
 
 char	*get_next_line(int fd);
 char	*ft_strchr(const char *s, int c);
