@@ -35,28 +35,38 @@ size_t	ft_strlen(const char *s)
 	size_t	i;
 
 	i = 0;
+	if (!s)
+		return (0);
 	while (s[i] != '\0')
 		i++;
 	return (i);
 }
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char *s1, char *s2)
 {
-	size_t		s1_length;
-	size_t		s2_length;
-	char		*sp;
+	char	*str;
+	size_t	i;
+	size_t	j;
 
+	if (!s1)
+	{
+		s1 = malloc(1 * sizeof(char));
+		s1[0] = '\0';
+	}
 	if (!s1 || !s2)
 		return (NULL);
-	s1_length = ft_strlen(s1);
-	s2_length = ft_strlen(s2);
-	sp = (char *)malloc(s1_length + s2_length + 1);
-	if (sp == NULL)
+	str = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
+	if (!str)
 		return (NULL);
-	ft_memmove(sp, s1, s1_length);
-	ft_memmove((char *)sp + s1_length, s2, s2_length);
-	sp[s1_length + s2_length] = '\0';
-	return (sp);
+	i = -1;
+	j = 0;
+	while (s1[++i])
+		str[i] = s1[i];
+	while (s2[j])
+		str[i++] = s2[j++];
+	str[i] = '\0';
+	free(s1);
+	return (str);
 }
 
 void	*ft_calloc(size_t nmemb, size_t size)
