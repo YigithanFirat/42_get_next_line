@@ -12,10 +12,35 @@
 
 #include "get_next_line.h"
 
+char	*read_from_file(int fd, char *store)
+{
+	char	*buffer;
+	int		read_bytes;
+
+	buffer = malloc((BUFFER_SIZE + 1) * sizeof(char));
+	if (!buffer)
+		return (NULL);
+	read_bytes = 1;
+	while (!ft_strchr(store, '\n') && read_bytes != 0)
+	{
+		read_bytes = read(fd, buffer, BUFFER_SIZE);
+		if (read_bytes == -1)
+		{
+			free(buffer);
+			free(store);
+			return (NULL);
+		}
+		buffer[read_bytes] = '\0';
+		store = ft_strjoin(store, buffer);
+	}
+	free(buffer);
+	return (store);
+}
+
 char	*get_next_line(int fd)
 {
-	static char	*store;
-	char		*line;
+	static char		*store;
+	char			*line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
