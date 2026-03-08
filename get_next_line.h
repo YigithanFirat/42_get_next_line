@@ -6,7 +6,7 @@
 /*   By: yfirat <yfirat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 14:11:20 by yfirat            #+#    #+#             */
-/*   Updated: 2026/02/28 16:06:33 by yfirat           ###   ########.fr       */
+/*   Updated: 2026/03/09 00:26:46 by yfirat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # define BUFFER_SIZE 42
 
-#include <stddef.h>
+# include <stddef.h>
 
 char	*get_next_line(int fd);
 char	*ft_strchr(const char *s, int c);
