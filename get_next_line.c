@@ -11,11 +11,13 @@
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+#include <stdlib.h>
+#include <unistd.h>
 
-char	*read_from_file(int fd, char *store)
+static char	*read_from_file(int fd, char *store)
 {
-	char	*buffer;
-	int		read_bytes;
+	char		*buffer;
+	ssize_t		read_bytes;
 
 	buffer = malloc((BUFFER_SIZE + 1) * sizeof(char));
 	if (!buffer)
@@ -34,6 +36,16 @@ char	*read_from_file(int fd, char *store)
 		store = ft_strjoin(store, buffer);
 	}
 	free(buffer);
+	return (store);
+}
+
+static char	*get_curr_line(char *st)
+{
+	return (st);
+}
+
+static char	*update_stat_buffer(char *store)
+{
 	return (store);
 }
 
