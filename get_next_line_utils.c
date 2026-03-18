@@ -68,24 +68,3 @@ char	*ft_strjoin(char *s1, char *s2)
 	free(s1);
 	return (str);
 }
-
-void	*ft_calloc(size_t nmemb, size_t size)
-{
-	unsigned char	*pp;
-	size_t			i;
-
-	if (nmemb == 0 || size == 0)
-		return (malloc(0));
-	i = 0;
-	if (size != 0 && nmemb > ((size_t) - 1 / size))
-		return (NULL);
-	pp = malloc(nmemb * size);
-	if (pp == NULL)
-		return (NULL);
-	while (i < nmemb * size)
-	{
-		pp[i] = 0;
-		i++;
-	}
-	return ((void *)pp);
-}
