@@ -41,12 +41,51 @@ static char	*read_from_file(int fd, char *store)
 
 static char	*get_curr_line(char *st)
 {
-	return (st);
+	int		i;
+	char	*str;
+
+	i = 0;
+	if (!st[i])
+		return (NULL);
+	while (st[i] && st[i] != '\n')
+		i++;
+	str = (char *)malloc(sizeof(char) * (i + 2));
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (st[i] && st[i] != '\n')
+	{
+		str[i] = st[i];
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
 }
 
 static char	*update_stat_buffer(char *store)
 {
-	return (store);
+	int		i;
+	int		j;
+	char	*str;
+
+	i = 0;
+	while (store[i] && store[i] != '\n')
+		i++;
+	if (!store[i])
+	{
+		free(store);
+		return (NULL);
+	}
+	str = (char *)malloc(sizeof(char) * (ft_strlen(store) - i + 1));
+	if (!str)
+		return (NULL);
+	i++;
+	j = 0;
+	while (store[i])
+		str[j++] = store[i++];
+	str[j] = '\0';
+	free(store);
+	return (str);
 }
 
 char	*get_next_line(int fd)
