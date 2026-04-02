@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yfirat <yfirat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
+/*   By: abusivesnake <abusivesnake@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 14:25:42 by yfirat            #+#    #+#             */
-/*   Updated: 2026/02/26 13:48:41 by yfirat           ###   ########.fr       */
+/*   Updated: 2026/04/02 18:06:53 by abusivesnak      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,4 +67,26 @@ char	*ft_strjoin(char *s1, char *s2)
 	str[i] = '\0';
 	free(s1);
 	return (str);
+}
+
+char	*ft_strdup(const char *s)
+{
+	size_t	s_length;
+	size_t	i;
+	char	*sp;
+
+	if (!s)
+		return (NULL);
+	s_length = ft_strlen(s);
+	sp = (char *)malloc(s_length + 1);
+	if (sp == NULL)
+		return (NULL);
+	i = 0;
+	while (s[i] != '\0')
+	{
+		sp[i] = s[i];
+		i++;
+	}
+	sp[i] = '\0';
+	return (sp);
 }
