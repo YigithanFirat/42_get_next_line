@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yfirat <yfirat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
+/*   By: abusivesnake <abusivesnake@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 14:10:54 by yfirat            #+#    #+#             */
-/*   Updated: 2026/03/09 00:27:05 by yfirat           ###   ########.fr       */
+/*   Updated: 2026/04/02 18:06:05 by abusivesnak      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,11 @@ static char	*get_curr_line(char *st)
 		str[i] = st[i];
 		i++;
 	}
+	if (st[i] == '\n')
+	{
+		str[i] = st[i];
+		i++;
+	}
 	str[i] = '\0';
 	return (str);
 }
@@ -97,7 +102,7 @@ char	*get_next_line(int fd)
 		return (NULL);
 	store = read_from_file(fd, store);
 	if (!store)
-		return (NULL);
+    	store = ft_strdup("");
 	line = get_curr_line(store);
 	store = update_stat_buffer(store);
 	return (line);
