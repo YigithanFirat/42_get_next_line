@@ -102,7 +102,7 @@ char	*get_next_line(int fd)
 		return (NULL);
 	store = read_from_file(fd, store);
 	if (!store)
-    	store = ft_strdup("");
+		store = ft_strdup("");
 	line = get_curr_line(store);
 	store = update_stat_buffer(store);
 	return (line);
