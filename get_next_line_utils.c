@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abusivesnake <abusivesnake@student.42.f    +#+  +:+       +#+        */
+/*   By: yfirat <yfirat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 14:25:42 by yfirat            #+#    #+#             */
-/*   Updated: 2026/04/02 18:51:22 by abusivesnak      ###   ########.fr       */
+/*   Updated: 2026/04/13 14:33:09 by yfirat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
