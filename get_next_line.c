@@ -39,7 +39,7 @@ static char	*read_from_file(int fd, char *store)
 	return (store);
 }
 
-static char	*get_curr_line(char *st)
+static char	*get_current_line(char *st)
 {
 	int		i;
 	char	*str;
@@ -103,7 +103,7 @@ char	*get_next_line(int fd)
 	store = read_from_file(fd, store);
 	if (!store)
 		store = ft_strdup("");
-	line = get_curr_line(store);
+	line = get_current_line(store);
 	store = update_state_buffer(store);
 	return (line);
 }
