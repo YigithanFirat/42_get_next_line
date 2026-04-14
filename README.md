@@ -18,7 +18,7 @@ Projenin ana mantığı static buffer değişkeni üzerinden veriyi işlemeke ü
 
 - `update_state_buffer` : Bir satır kullanıcıya döndürdükten sonra statik değişkende kalan veriyi (bir sonraki satırın başlangıcı) günceller. Kullanılan kısmı serbest bırakır ve kalan kısmı bir sonraki `get_next_line` çağrısı için saklar.
 
-- `get_next_line` : Projenin ana fonksiyonudur. Hata kontrolleri yapar, dosyadan okuma işlemini tetikler, satırı oluşturur ve statik tamponu güncelleyerek elde edilen satırı döndürür.
+`get_next_line` : Projenin ana giriş noktasıdır. Dosya tanımlayıcısı (fd) ve `BUFFER_SIZE` geçerliliğini kontrol ettikten sonra süreci başlatır. `read_from_file` ile dosyadan veri okur; eğer okunan veri yoksa süreci güvenli bir boş dize ile devam ettirir. `get_current_line` ile döndürülecek satırı belleğe alır ve son olarak `update_state_buffer` ile statik değişkeni bir sonraki çağrı için güncelleyerek satırı kullanıcıya döndürür.
 
 ### Utility Functions
 
