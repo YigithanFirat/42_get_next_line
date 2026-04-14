@@ -47,7 +47,7 @@ cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 get_next_line_utils.c get_next_line.c
 Derleme sonrasında oluşan `gnl` dosyasını şu şekilde çalıştırabilirsiniz.
 
 ```bash
-./gnl <dosya_adı>
+./gnl <dosya_adı> || ./gnl
 ```
 
 ## RESOURCES
