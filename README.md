@@ -14,7 +14,7 @@ Projenin ana mantığı static buffer değişkeni üzerinden veriyi işlemeke ü
 
 - `read_from_file` : Belirtilen dosyadan satır sonu (`\n`) veya dosya sonuna kadar (EOF) BUFFER_SIZE kadar veri okur. Okunana her parça statik olarak değişkene eklenerek verinin birikmesini sağlar.
 
-- `get_curr_line` : Statik değişkende biriken verinin başından başlayarak `\n` karakterine kadar (o kısım dahil olmak üzere) ayıklar ve yeni bellek alanına kopyalayarak geri döndürür. Bu kullanıcının fonksiyonu çağırdığında elde edeceği mevcut satırdır.
+- `get_current_line` : Statik değişkende biriken verinin başından başlayarak `\n` karakterine kadar (o kısım dahil olmak üzere) ayıklar ve yeni bellek alanına kopyalayarak geri döndürür. Bu kullanıcının fonksiyonu çağırdığında elde edeceği mevcut satırdır.
 
 - `update_state_buffer` : Bir satır kullanıcıya döndürdükten sonra statik değişkende kalan veriyi (bir sonraki satırın başlangıcı) günceller. Kullanılan kısmı serbest bırakır ve kalan kısmı bir sonraki `get_next_line` çağrısı için saklar.
 
