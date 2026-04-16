@@ -6,12 +6,11 @@
 /*   By: yfirat <yfirat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 14:33:02 by yfirat            #+#    #+#             */
-/*   Updated: 2026/04/13 17:25:32 by yfirat           ###   ########.fr       */
+/*   Updated: 2026/04/15 16:43:42 by yfirat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-#include <stdlib.h>
 #include <unistd.h>
 
 static char	*read_from_file(int fd, char *store)

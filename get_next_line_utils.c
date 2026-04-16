@@ -6,11 +6,10 @@
 /*   By: yfirat <yfirat@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 14:25:42 by yfirat            #+#    #+#             */
-/*   Updated: 2026/04/13 14:33:09 by yfirat           ###   ########.fr       */
+/*   Updated: 2026/04/15 16:43:53 by yfirat           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "get_next_line.h"
 
 char	*ft_strchr(const char *s, int c)
